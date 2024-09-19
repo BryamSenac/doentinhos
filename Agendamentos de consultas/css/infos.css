@@ -1,0 +1,10 @@
+.area_agenda{
+    width: 50vw;
+    height: 50vh;
+    border-radius: 25px;
+    background-color: #E7F4EF;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
