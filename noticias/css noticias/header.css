@@ -1,0 +1,19 @@
+header{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+header div {
+    width: 45vw;
+    height: 10hw;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+
+}
