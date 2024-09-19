@@ -1,0 +1,85 @@
+.menu_flutuante{
+    width: 15vw;
+    height: 100vh;
+    background-color: gray;
+    border-radius: 29px;
+    position: absolute;
+    left: -1vw;
+    z-index: -2;
+}
+#icon_home{
+    width: 4vw;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+#btn_ctvc{
+    width: 14vw;
+    height: 7vh;
+    background-color: #ACD9E6;
+    position: absolute;
+    top: 13vh;
+}
+#btn_istituições{
+    width: 14vw;
+    height: 7vh;
+    background-color: #ACD9E6;
+    position: absolute;
+    top: 20vh;
+
+}
+#noticias{
+    width: 14vw;
+    height: 7vh;
+    background-color: #ACD9E6;
+    position: absolute;
+    top: 27vh;
+}
+#titulo{
+    width: 15vw;
+    height: 6vh;
+    position:absolute;
+    left: 79vw;
+    top: 3vh;
+    background-color: #4887A6;
+    border-radius: 33px;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+}
+.btn_menu{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+#perfil{
+    width: 3vw;
+    height: 6vh;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    left: 96vw;
+    top: 3vh;
+}
+#icon_sup{
+    width: 3vw;
+    height: 6vh;
+    position: absolute;
+    top: 92vh;
+    left: 1vw;
+}
+.icone_sup{
+    width: 4vw;
+    height: 7vh;
+    background-color: white;
+    position: absolute;
+    top: 92vh;
+    left: 1vw;
+    border-radius: 50%;
+    border: 2px solid black;
+    z-index: -1;
+}
