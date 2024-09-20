@@ -1,10 +1,139 @@
 .area_agenda{
-    width: 50vw;
-    height: 50vh;
+    width: 71vw;
+    height: 66vh;
     border-radius: 25px;
     background-color: #E7F4EF;
+    position: absolute;
+    left: 22vw;
+    top: 30vh;
+}
+#titulo{
+    width: 15vw;
+    height: 6vh;
+    position:absolute;
+    left: 79vw;
+    top: 3vh;
+    background-color: #4887A6;
+    border-radius: 33px;
+    font-size: 40px;
+    color: white;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+#perfil{
+    width: 3vw;
+    height: 6vh;
+    border-radius: 50%;
+    background-color: black;
+    position: absolute;
+    left: 96vw;
+    top: 3vh;
+}
+.hospitais{
+    width: 15vw;
+    height: 6vh;
+    background-color: #4887A6;
+    font-size: 25px;
+    color: white;
+    position: absolute;
+    left: 15vw;
+    top: 4vh;
+    border: 3px solid black;
+    
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+#barra_data{
+    width: 71vw;
+    height: 4vh;
+    font-size: 20px;
+    background-color: #E7F4EF;
+    position: absolute;
+    left: 22vw;
+    top: 23vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.titulo_agenda{
+    width: 71vw;
+    height: 5vh;
+    background-color: #E7F4EF;
+    font-size: 20px;
+    position: absolute;
+    left: 22vw;
+    top: 13vh;
+    
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+#dec_titulo_agenda{
+    width: 71vw;
+    height: 5px;
+    background-color: black;
+    position: absolute;
+    left: 22vw;
+    top: 13vh;
+}
+.data{
+    font-size: 30px;
+    position: absolute;
+    left: 22vw;
+    top: 16vh;
+}
+#aviso{
+    font-size: 27px;
+    position: absolute;
+    left: 91vw;
+    top: 23vh;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+}
+.nome_paciente{
+    font-size: 36px;
+    position: absolute;
+    left: 24vw;
+    top: 26vh;
+}
+#linha_tranparent{
+    width: 69vw;
+    height: 0.2vh;
+    background-color: #ACD9E6;
+    position: absolute;
+    left: 23vw;
+    top: 37vh;
+
+}
+.barra_consulta{
+    width: 71vw;
+    height: 7vh;
+    background-color: #ACD9E6;
+    position: absolute;
+    left: 22vw;
+    top: 40vh;
+}
+#divisão_barra{
+    width: 0.1vw;
+    height: 7vh;
+    background-color: black;
+    position: absolute;
+    left: 41vw;
+    top: 0.1vh;
+}
+#dec_barra_consulta{
+    width: 0.5vw;
+    height: 6.9vh;
+    background-color: black;
+    position: absolute;
+    left: 0.01vw;
+    top: 0.1vh;
+
 }

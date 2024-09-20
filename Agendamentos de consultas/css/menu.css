@@ -1,7 +1,7 @@
 .menu_flutuante{
     width: 15vw;
     height: 100vh;
-    background-color: gray;
+    background-color: #E7F4EF;
     border-radius: 29px;
     position: absolute;
     left: -1vw;
@@ -18,36 +18,42 @@
 #btn_ctvc{
     width: 14vw;
     height: 7vh;
+    font-size: 20px;
     background-color: #ACD9E6;
     position: absolute;
     top: 13vh;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 #btn_istituições{
     width: 14vw;
     height: 7vh;
+    font-size: 20px;
     background-color: #ACD9E6;
     position: absolute;
     top: 20vh;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 
 }
 #noticias{
     width: 14vw;
     height: 7vh;
+    font-size: 20px;
     background-color: #ACD9E6;
     position: absolute;
     top: 27vh;
-}
-#titulo{
-    width: 15vw;
-    height: 6vh;
-    position:absolute;
-    left: 79vw;
-    top: 3vh;
-    background-color: #4887A6;
-    border-radius: 33px;
-    font-size: 40px;
-    color: white;
+
+    display: flex;
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 .btn_menu{
     font-size: 20px;
@@ -55,15 +61,6 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-}
-#perfil{
-    width: 3vw;
-    height: 6vh;
-    border-radius: 50%;
-    background-color: black;
-    position: absolute;
-    left: 96vw;
-    top: 3vh;
 }
 #icon_sup{
     width: 3vw;
