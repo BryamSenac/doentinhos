@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./login.css">
+    <script src="https://kit.fontawesome.com/8f497cd43a.js" crossorigin="anonymous"></script>
+    <script type="module" src="./login.js"></script>
+    <title>Doentinhos</title>
+</head>
+
+<body>
+    <section class="login-section">
+        <div class="login-box">
+            <div class="login-image">
+                <img src="https://portalhospitaisbrasil.com.br/wp-content/uploads/2020/07/saude.png" alt="Imagem de Login">
+            </div>
+            <div class="login-container">
+                <h1>Doentinhos</h1>
+                <div class="social-login">
+                    <button class="google-btn">
+                        <i class="fa-brands fa-google"></i>
+                        Continue com Google
+                    </button>
+                    <button class="facebook-btn">
+                        <i class="fa-brands fa-facebook"></i>
+                        Continue com Facebook
+                    </button>
+                </div>
+                <div class="input-container">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Email" class="input-field" required>
+                </div>
+                <div class="input-container">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Senha" class="input-field" required>
+                </div>
+                <input type="button" value="Entrar" id="login-button">
+                <div class="login-footer">Ainda não tem uma conta? <a href="./cadastro.html">Crie uma</a></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="loading" id="loading" style="display:none;">
+        <div class="spinner"></div>
+    </div>
+
+</body>
+
+</html>
