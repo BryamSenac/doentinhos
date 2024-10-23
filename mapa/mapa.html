@@ -1,32 +1,41 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doentinhos</title>
-    <link rel="stylesheet" href="./mapa.css">
+    <link rel="stylesheet" href="mapa.css">
 </head>
 <body>
-<div id="mapas"></div>
     <div class="container">
-        <div class="header">Doentinhos</div>
-        <div class="map" id="map"></div>
-        <div class="rating">4.0 ★★★★☆ (4)</div>
-        <div class="clinic-info">
-            <h2>Clinica do Trabalho</h2>
-            <p>Serviço de saúde ocupacional</p>
-            <p>Av. Júlio Assis Cavaleiro</p>
-            <p class="open">Aberto fecha às 17:00</p>
-            <p>(46) 3524-2120</p>
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search...">
-            <button>🔍</button>
-        </div>
-        <div class="start-button">
-            <button>Iniciar</button>
+        <header>
+            <h1>Doentinhos</h1>
+        </header>
+        
+        <section class="map-section">
+            <img src="mapa.png" alt="Mapa de Clínicas">
+        </section>
+        
+        <section class="info-section">
+            <div class="rating">
+                <span>3.0</span>
+                <span class="stars">★★★☆☆</span>
+                <span>(4)</span>
+            </div>
+            <div class="clinic-info">
+                <h2>Clínica do Trabalho</h2>
+                <p>Serviço de saúde ocupacional</p>
+                <p>Av. Júlio Assis Cavaleiro</p>
+                <p class="status"><span class="open">Aberto</span> fecha às 17:00</p>
+                <p class="phone">(46) 3524-2120</p>
+            </div>
+        </section>
+
+        <div class="action">
+            <button id="startButton">Iniciar</button>
         </div>
     </div>
-    <script src="./mapa.js"></script>
+
+    <script src="mapa.js"></script>
 </body>
 </html>
