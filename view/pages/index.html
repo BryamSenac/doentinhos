@@ -1,30 +1,44 @@
 <!DOCTYPE html>
-
-
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doentinhos</title>
-    <link rel="stylesheet" href="./../css/styles.css">
+    <link rel="stylesheet" href="./../css/index/index.css">
     <script type="module" src="./../js/cartoes_view.js"> </script>
-
 </head>
 
 <body>
-    <div class="container">
-        <header id="cabecao">
-            <h1 id="titulo"> Doentinhos</h1>
-        </header>
-        <div class="search-container">
-            <input type="text" class="search-bar" placeholder="Pesquisar">
-            <button class="search-btn">🔍</button>
-            <input type="text" class="paciente-bar" placeholder="Paciente:">
+    <header>
+        <div class="logo" id="logo">
+            <p>Sempre tratando dos nossos</p>
+            <h1 id="doentinho">Doentinhos</h1>
         </div>
-        <div class="grid" id="grid-container">
+        <nav id="navigation">
+            <button><a id="butones" href="#">Notícias </a></button>
+            <button><a id="butones" href="#">Carteirinha de vacinação </a></button>
+            <button><a id="butones" href="#">Instituições ao seu alcance </a></button>
+            <button><a id="butones" href="#">Agendamento de consultas </a></button>
+        </nav>
+        <div class="search-bar" id="search-bar">
+            <input type="text" placeholder="Do que precisa?">
+            <button> <img  id= "img2"src="https://cdn-icons-png.flaticon.com/512/2866/2866321.png"
+                    alt="Ícone de pesquisa"></button>
         </div>
-    </div>
+    </header>
+
+    <section id="cabecao">
+        <div class="container">
+            <div class="search-container">
+                <input type="text" class="search-barp" placeholder="Pesquisar:">
+                <button class="search-btn"> 🔍</button>
+                <input type="text" class="paciente-bar" placeholder="Paciente:">
+            </div>
+            <div class="grid" id="grid-container">
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

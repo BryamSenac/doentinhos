@@ -1,31 +1,15 @@
-
-body {
-    width: 100vw;
-    height: 100vh;
-    
-    font-family: Arial, sans-serif;
-    background-color: #A5D8FF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-   margin-top: -15vw;
-}
-
 .container {
     width: 80%;
 }
 
-
-#cabecao{
-margin-top: 30vw;
-color: black;
-
-}
-header {
-    text-align: center;
-    margin-bottom: 20px;
-    margin-top: 1vh;
+#cabecao {
+    margin-top: 10vh;
+    width: 100vw;
+    height: 90vh;
+    font-family: Arial, sans-serif;
+    background-color: #ACD9E6;
+    display: flex;
+    justify-content: center;
 }
 
 h1 {
@@ -34,7 +18,6 @@ h1 {
     background-color: #E1E9F5;
     padding: 10px;
     border-radius: 5px;
-    margin-top: 15vw;
 }
 
 .search-container {
@@ -43,15 +26,22 @@ h1 {
     margin-bottom: 20px;
 }
 
-.search-bar, .paciente-bar {
-    width: 45%;
+.paciente-bar {
+    width: 70vh;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.search-barp {
+    width: 70vh;
+    padding: 10px;
+    border-radius: 10px;
     border: 1px solid #ccc;
 }
 
 .search-btn {
-    background-color: #4A90E2;
+    background-color: #5d93a1;
     border: none;
     padding: 10px;
     border-radius: 5px;
@@ -85,4 +75,5 @@ h1 {
 .info p {
     margin-bottom: 5px;
 }
+
 

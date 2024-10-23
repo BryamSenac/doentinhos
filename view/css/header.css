@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Oleo+Script:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display:ital@0;1&family=Oleo+Script:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5vh 3vw; 
+    background-color: #77b4c5; 
+    border-bottom: 0.1vh solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+#butones {
+    color: #868484;
+}
+
+#navigation {
+    border-radius: 10px;
+}
+
+#logo {
+    display: flex;
+    flex-direction: column;
+}
+
+#logo p {
+    font-size: 1.3vh; 
+    color: #666;
+    font-family: "DM Serif Display", serif;
+}
+
+#doentinho {
+    font-size: 3.5vh; 
+    font-weight: bold;
+    color: #666; 
+    background-color: #E7F4EF;
+    font-family: "Oleo Script", serif;
+}
+
+nav {
+    display: flex; 
+    gap: 1.5vw; 
+}
+
+nav button {
+    background-color: #E7F4EF;
+    color: #868484;
+    border: none;
+    padding: 0.8vh 1.5vw; 
+    font-size: 1.8vh; 
+    font-weight: bold;
+    border-radius: 0.5vh; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+nav button:hover {
+    background-color: #c5e2d7;
+    transform: translateY(-1px); 
+}
+
+
+#search-bar {
+    display: flex;
+    align-items: center;    
+    border: 0.1vh solid #ccc;
+    padding: 0.8vh; 
+    border-radius: 0.5vh;
+    background-color: #E7F4EF; 
+}
+
+#search-bar input {
+    border: none;
+    outline: none;
+    padding: 0.8vh; 
+    font-size: 1.6vh; 
+    width: 180px; 
+}
+
+#search-bar button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#search-bar img {
+    width: 1.8vh;
+    height: 1.8vh;
+}
+#img2 {
+    margin-left: 5px;
+}
