@@ -66,7 +66,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Função de filtro
     function filterData(searchTerm) {
-        // Converter o termo de busca e os dados para minúsculas para fazer a comparação
         searchTerm = searchTerm.trim().toLowerCase();
         if (searchTerm === "") {
             return dados; // Se a pesquisa estiver vazia, retorna todos os dados
@@ -77,20 +76,39 @@ document.addEventListener("DOMContentLoaded", function () {
         );
     }
 
+    // Função para realizar a pesquisa (chamada ao clicar no botão ou pressionar Enter)
+    function realizarPesquisa(searchInputId) {
+        const searchTerm = document.getElementById(searchInputId).value.toLowerCase();
+        const filteredData = filterData(searchTerm);
+        renderCards(filteredData);
+    }
+
+    // Adicionando funcionalidade para Enter no header e nas seções
+    document.getElementById("header-search").addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+            realizarPesquisa("header-search");
+        }
+    });
+
+    document.getElementById("vacina-search").addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+            realizarPesquisa("vacina-search");
+        }
+    });
+
+    document.getElementById("paciente-search").addEventListener("keypress", function (e) {
+        if (e.key === "Enter") {
+            realizarPesquisa("paciente-search");
+        }
+    });
+
     // Evento do botão de pesquisa na área de cartões (vacina/paciente)
     document.getElementById("vacina-search-btn").addEventListener("click", function () {
-        let vacinaSearchTerm = document.getElementById("vacina-search").value.toLowerCase();
-        let pacienteSearchTerm = document.getElementById("paciente-search").value.toLowerCase();
-
-        const filteredData = filterData(vacinaSearchTerm || pacienteSearchTerm);
-        renderCards(filteredData);
+        realizarPesquisa("vacina-search");
     });
 
     // Evento do botão de pesquisa no header
     document.getElementById("header-search-btn").addEventListener("click", function () {
-        let headerSearchTerm = document.getElementById("header-search").value.toLowerCase();
-        
-        const filteredData = filterData(headerSearchTerm);
-        renderCards(filteredData);
+        realizarPesquisa("header-search");
     });
 });
