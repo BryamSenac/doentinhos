@@ -39,10 +39,14 @@ document.addEventListener("DOMContentLoaded", function () {
     function renderCards(filteredData) {
         const gridContainer = document.getElementById("grid-container");
         gridContainer.innerHTML = ''; // Limpa os cartões anteriores
-        filteredData.forEach(dado => {
-            const card = createCard(dado.data, dado.nomeVacina, dado.paraQueServe, dado.validade, dado.assinatura);
-            gridContainer.appendChild(card);
-        });
+        if (filteredData.length === 0) {
+            gridContainer.innerHTML = '<p>Nenhum resultado encontrado.</p>'; // Mensagem caso não haja resultados
+        } else {
+            filteredData.forEach(dado => {
+                const card = createCard(dado.data, dado.nomeVacina, dado.paraQueServe, dado.validade, dado.assinatura);
+                gridContainer.appendChild(card);
+            });
+        }
     }
 
     // Exemplo de dados
@@ -60,14 +64,25 @@ document.addEventListener("DOMContentLoaded", function () {
     // Renderiza os cartões ao carregar a página
     renderCards(dados);
 
+    // Função de filtro
+    function filterData(searchTerm) {
+        // Converter o termo de busca e os dados para minúsculas para fazer a comparação
+        searchTerm = searchTerm.trim().toLowerCase();
+        if (searchTerm === "") {
+            return dados; // Se a pesquisa estiver vazia, retorna todos os dados
+        }
+
+        return dados.filter(dado => 
+            dado.nomeVacina.toLowerCase().includes(searchTerm) || dado.assinatura.toLowerCase().includes(searchTerm)
+        );
+    }
+
     // Evento do botão de pesquisa na área de cartões (vacina/paciente)
     document.getElementById("vacina-search-btn").addEventListener("click", function () {
         let vacinaSearchTerm = document.getElementById("vacina-search").value.toLowerCase();
         let pacienteSearchTerm = document.getElementById("paciente-search").value.toLowerCase();
 
-        const filteredData = dados.filter(dado => 
-            dado.nomeVacina.toLowerCase().includes(vacinaSearchTerm) || dado.assinatura.toLowerCase().includes(pacienteSearchTerm)
-        );
+        const filteredData = filterData(vacinaSearchTerm || pacienteSearchTerm);
         renderCards(filteredData);
     });
 
@@ -75,9 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("header-search-btn").addEventListener("click", function () {
         let headerSearchTerm = document.getElementById("header-search").value.toLowerCase();
         
-        const filteredData = dados.filter(dado => 
-            dado.nomeVacina.toLowerCase().includes(headerSearchTerm) || dado.assinatura.toLowerCase().includes(headerSearchTerm)
-        );
+        const filteredData = filterData(headerSearchTerm);
         renderCards(filteredData);
     });
 });
