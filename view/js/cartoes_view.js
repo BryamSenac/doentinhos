@@ -1,20 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Função para criar um cartão dinâmico
     function createCard(data, nomeVacina, paraQueServe, validade, assinatura) {
-        // Cria o container do cartão
         const card = document.createElement("div");
         card.classList.add("box");
 
-        // Adiciona o título "Pesquisar"
         const title = document.createElement("h3");
         title.textContent = "Pesquisar";
         card.appendChild(title);
 
-        // Cria a área de informações do cartão
         const info = document.createElement("div");
         info.classList.add("info");
 
-        // Adiciona as informações
         const dateP = document.createElement("p");
         dateP.textContent = `Data: ${data}`;
         info.appendChild(dateP);
@@ -35,17 +31,21 @@ document.addEventListener("DOMContentLoaded", function () {
         assinaturaP.textContent = `Assin: ${assinatura}`;
         info.appendChild(assinaturaP);
 
-        // Anexa o info ao card
         card.appendChild(info);
-
-        // Retorna o cartão completo
         return card;
     }
 
-    // Adiciona cartões dinâmicos à página
-    const gridContainer = document.getElementById("grid-container");
+    // Função para exibir cartões na tela
+    function renderCards(filteredData) {
+        const gridContainer = document.getElementById("grid-container");
+        gridContainer.innerHTML = ''; // Limpa os cartões anteriores
+        filteredData.forEach(dado => {
+            const card = createCard(dado.data, dado.nomeVacina, dado.paraQueServe, dado.validade, dado.assinatura);
+            gridContainer.appendChild(card);
+        });
+    }
 
-    // Exemplo de dados que podem vir de um servidor ou formulário
+    // Exemplo de dados
     const dados = [
         { data: "01/01/2024", nomeVacina: "BCG", paraQueServe: "Tuberculose", validade: "12/2024", assinatura: "Dr. João" },
         { data: "05/02/2024", nomeVacina: "Hepatite B", paraQueServe: "Hepatite B", validade: "11/2024", assinatura: "Dra. Maria" },
@@ -57,16 +57,27 @@ document.addEventListener("DOMContentLoaded", function () {
         { data: "05/08/2024", nomeVacina: "Influenza", paraQueServe: "Gripe", validade: "05/2024", assinatura: "Dra. Carla" }
     ];
 
-    // Percorre os dados e cria os cartões
-    dados.forEach(dado => {
-        const card = createCard(dado.data, dado.nomeVacina, dado.paraQueServe, dado.validade, dado.assinatura);
-        gridContainer.appendChild(card);
+    // Renderiza os cartões ao carregar a página
+    renderCards(dados);
+
+    // Evento do botão de pesquisa na área de cartões (vacina/paciente)
+    document.getElementById("vacina-search-btn").addEventListener("click", function () {
+        let vacinaSearchTerm = document.getElementById("vacina-search").value.toLowerCase();
+        let pacienteSearchTerm = document.getElementById("paciente-search").value.toLowerCase();
+
+        const filteredData = dados.filter(dado => 
+            dado.nomeVacina.toLowerCase().includes(vacinaSearchTerm) || dado.assinatura.toLowerCase().includes(pacienteSearchTerm)
+        );
+        renderCards(filteredData);
     });
 
-    // Evento do botão de pesquisa
-    document.querySelector(".search-btn").addEventListener("click", function () {
-        let searchTerm = document.querySelector(".search-bar").value;
-        let pacienteName = document.querySelector(".paciente-bar").value;
-        alert(`Pesquisa realizada para: ${searchTerm} Paciente: ${pacienteName}`);
+    // Evento do botão de pesquisa no header
+    document.getElementById("header-search-btn").addEventListener("click", function () {
+        let headerSearchTerm = document.getElementById("header-search").value.toLowerCase();
+        
+        const filteredData = dados.filter(dado => 
+            dado.nomeVacina.toLowerCase().includes(headerSearchTerm) || dado.assinatura.toLowerCase().includes(headerSearchTerm)
+        );
+        renderCards(filteredData);
     });
 });

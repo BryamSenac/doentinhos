@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doentinhos</title>
     <link rel="stylesheet" href="./../css/index/index.css">
-    <script type="module" src="./../js/cartoes_view.js"> </script>
+    <script type="module" src="./../js/cartoes_view.js"></script>
 </head>
 
 <body>
@@ -16,14 +16,14 @@
             <h1 id="doentinho">Doentinhos</h1>
         </div>
         <nav id="navigation">
-            <button><a id="butones" href="#">Notícias </a></button>
-            <button><a id="butones" href="#">Carteirinha de vacinação </a></button>
-            <button><a id="butones" href="#">Instituições ao seu alcance </a></button>
-            <button><a id="butones" href="#">Agendamento de consultas </a></button>
+            <button><a id="butones" href="#">Notícias</a></button>
+            <button><a id="butones" href="#">Carteirinha de vacinação</a></button>
+            <button><a id="butones" href="#">Instituições ao seu alcance</a></button>
+            <button><a id="butones" href="#">Agendamento de consultas</a></button>
         </nav>
         <div class="search-bar" id="search-bar">
-            <input type="text" placeholder="Do que precisa?">
-            <button> <img  id= "img2"src="https://cdn-icons-png.flaticon.com/512/2866/2866321.png"
+            <input type="text" id="header-search" placeholder="Do que precisa?">
+            <button id="header-search-btn"> <img id="img2" src="https://cdn-icons-png.flaticon.com/512/2866/2866321.png"
                     alt="Ícone de pesquisa"></button>
         </div>
     </header>
@@ -31,9 +31,9 @@
     <section id="cabecao">
         <div class="container">
             <div class="search-container">
-                <input type="text" class="search-barp" placeholder="Pesquisar:">
-                <button class="search-btn"> 🔍</button>
-                <input type="text" class="paciente-bar" placeholder="Paciente:">
+                <input type="text" class="search-barp" id="vacina-search" placeholder="Pesquisar vacina:">
+                <button class="search-btn" id="vacina-search-btn"> 🔍</button>
+                <input type="text" class="paciente-bar" id="paciente-search" placeholder="Paciente:">
             </div>
             <div class="grid" id="grid-container">
             </div>
